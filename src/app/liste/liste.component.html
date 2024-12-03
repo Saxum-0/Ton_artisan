@@ -1,0 +1,68 @@
+  <div class="body">
+    <div class="title">
+      <hr />
+      <h2>Comment trouver son artisan ?</h2>
+    </div>
+  
+    <div class="container">
+      <div class="research row justify-content-end align-items-center">
+        <div class="select-category col-sm-6">
+          <select class="category"
+            name="category"
+            style="
+              border: solid 1px #0074c7;
+              color: #00497c;
+              background-color: #fff;
+            "
+            (change)="sortArtisans($event)"
+          >
+            <option value="">Sélectionnez une catégorie</option>
+            <option value="Bâtiment">Bâtiment</option>
+            <option value="Services">Services</option>
+            <option value="Alimentation">Alimentation</option>
+            <option value="Fabrication">Fabrication</option>
+          </select>
+        </div>
+  
+        <form class="d-flex col-sm-5 search" role="search" name="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Rechercher"
+            aria-label="Search"
+            name="search"
+            (input)="searchArtisans($event)"
+          />
+        </form>
+      </div>
+    </div>
+  
+    <div class="container container-cards">
+      <div class="row mx-auto">
+        <div *ngFor="let artisan of sortedArtisans" class="col-sm-4 mb-3">
+          <div class="card mx-auto" style="width: 22rem">
+            <div class="card-body">
+              <div class="name-location">
+                <div class="name-job">
+                  <h5 class="card-title">{{ artisan.name }}</h5>
+                  <h6 class="card-title">{{ artisan.category }}</h6>
+                </div>
+                <div class="location">
+                  <p class="location card-text">{{ artisan.location }} <br /></p>
+                </div>
+              </div>
+              <div class="opinion-btn">
+                <div class="opinion">
+                  <p>Note</p>
+                  <p>{{artisan.note}}/5</p>
+                  </div>
+                </div>
+                <a href="/artisansheet/{{ artisan.id }}" class="btn btn-primary">Voir plus</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  

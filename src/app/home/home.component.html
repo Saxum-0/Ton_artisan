@@ -1,0 +1,106 @@
+
+<div class="body">
+    <div class="part-one">
+      <div class="artisan artisan-one custom-container text-center mt-4">
+        <div class="row justify-content-center">
+          <div class="step step-one">
+            <p class="number">1</p>
+            <div class="text-step">
+              <p>
+                Choississez la catégorie de votre artisan dans le menu
+                ci-dessus.
+              </p>
+            </div>
+          </div>
+          <div class="step step-two">
+            <p class="number">2</p>
+            <div class="text-step">
+              <p>Choississez l’artisan qui correspond à vos besoins.</p>
+            </div>
+          </div>
+          <div class="step step-three">
+            <p class="number">3</p>
+            <div class="text-step">
+              <p>Contactez-le grâce au formulaire de contact</p>
+            </div>
+          </div>
+          <div class="step step-four">
+            <p class="number">4</p>
+            <div class="text-step">
+              <p>La réponse arrivera sous 48 heures !</p>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4 mb-4">
+            <h3 class="name">{{ bestArtisan.name }}</h3>
+            <h4 class="job">{{ bestArtisan.specialty }}</h4>
+            <div class="opinion">
+              <p>Avis</p>
+              <p>{{bestArtisan.note}}/5</p>
+          <div class="location col-md-4 mb-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22015.246632519687!2d6.570488604549371!3d46.39109280064432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c234cf9a92fd3%3A0x408ab2ae4ba9fd0!2s74500%20%C3%89vian-les-Bains!5e0!3m2!1sfr!2sfr!4v1708968020624!5m2!1sfr!2sfr"
+              width="300"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="artisan-two-three custom-container text-center mx-4">
+        <div class="row justify-content-center">
+          <div
+            class="artisan artisans artisan-two col-md-6 custom-container text-center"
+          >
+            <div class="row">
+              <div class="opinion-name col-md-6">
+                <h4 class="name">{{ secondArtisan?.name }}</h4>
+                <h5 class="job">{{ secondArtisan?.specialty }}</h5>
+                <div class="opinion">
+                  <p>Avis</p>
+                  <p>{{secondArtisan.note}}/5</p>
+              <div class="location col-md-6">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45117.37196445078!2d3.8561181315968955!3d45.02825969371488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5fa4041a0c829%3A0x4093cafcbe7fa70!2s43000%20Le%20Puy-en-Velay!5e0!3m2!1sfr!2sfr!4v1708968060268!5m2!1sfr!2sfr"
+                  width="250"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div
+            class="artisan artisans artisan-three col-md-6 custom-container text-center"
+          >
+            <div class="row">
+              <div class="opinion-name col-md-6">
+                <h4 class="name">{{ thirdArtisan?.name }}</h4>
+                <h5 class="job">{{ thirdArtisan?.specialty }}</h5>
+                <div class="opinion">
+                  <p>Avis</p>
+                  <p>{{thirdArtisan.note}}</p>
+              <div class="location col-md-6">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44994.268678672226!2d5.67434053364428!3d45.184225893865154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af48bd689be6f%3A0x618c10cd6e995398!2sGrenoble!5e0!3m2!1sfr!2sfr!4v1708968102925!5m2!1sfr!2sfr"
+                  width="250"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="part-two">
+        </div>
+      </div>
+    </div>
+  </div>
+  
