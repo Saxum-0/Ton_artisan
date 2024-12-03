@@ -15,7 +15,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   
 })
 export class HeaderComponent {
-logo: any = "./assets/logo.png"
+logo: any = "/src/assets/Logo.png"
 sortedArtisans!: Artisan[];
 artisans!: Artisan[];
 
