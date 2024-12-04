@@ -9,12 +9,12 @@ import { ErreurComponent } from './erreur/erreur.component';
 
   export const routes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "artisan", component: ListeComponent},
+    { path: "liste", component: ListeComponent},
     { path: 'services', component: ListeComponent, data: { category: 'Services' } },
     { path: 'fabrication', component: ListeComponent, data: { category: 'Fabrication' } },
     { path: 'alimentation', component: ListeComponent, data: { category: 'Alimentation' } },
     { path: 'batiment', component: ListeComponent, data: { category: 'Bâtiment' } },    
-    { path: "artisansheet/:id", component: FicheComponent },
+    { path: "fiche/:id", component: FicheComponent },
     { path: '404', component: ErreurComponent },
     { path: '**', redirectTo: '/404' }
 ];

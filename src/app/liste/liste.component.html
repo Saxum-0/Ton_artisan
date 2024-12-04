@@ -7,21 +7,7 @@
     <div class="container">
       <div class="research row justify-content-end align-items-center">
         <div class="select-category col-sm-6">
-          <select class="category"
-            name="category"
-            style="
-              border: solid 1px #0074c7;
-              color: #00497c;
-              background-color: #fff;
-            "
-            (change)="sortArtisans($event)"
-          >
-            <option value="">Sélectionnez une catégorie</option>
-            <option value="Bâtiment">Bâtiment</option>
-            <option value="Services">Services</option>
-            <option value="Alimentation">Alimentation</option>
-            <option value="Fabrication">Fabrication</option>
-          </select>
+          
         </div>
   
         <form class="d-flex col-sm-5 search" role="search" name="search">
@@ -57,7 +43,7 @@
                   <p>{{artisan.note}}/5</p>
                   </div>
                 </div>
-                <a href="/artisansheet/{{ artisan.id }}" class="btn btn-primary">Voir plus</a
+                <a href="fiche/{{ artisan.id }}" class="btn btn-primary">Voir plus</a
                 >
               </div>
             </div>

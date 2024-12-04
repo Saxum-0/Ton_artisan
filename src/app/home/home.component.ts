@@ -8,13 +8,13 @@ import { Artisan } from '../liste/liste.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
+
 })
 
 export class HomeComponent {
   location: any = '../assets/location.png';
   favicon: any = '../assets/favicon.png';
-  halfStar: any = '../assets/half-star.png';
   artisans!: Artisan[];
   bestArtisan: any;
   secondArtisan: any;

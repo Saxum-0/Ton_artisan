@@ -1,5 +1,5 @@
 import { Component, Input, OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { ApiService } from '../api.service';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef } from '@angular/core';
@@ -11,10 +11,13 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   selector: 'app-liste',
   templateUrl: './liste.component.html',
   styleUrl: './liste.component.scss',
+ 
 })
-export class ListeComponent {
+export class ListeComponent implements OnInit{
 
-  favicon: any = './src/assets/favicon.png';
+
+
+  favicon: any = 'favicon.png';
   @Input() id: number = 0;
   artisans!: Artisan[];
   sortedArtisans!: Artisan[];
@@ -65,9 +68,7 @@ export class ListeComponent {
   }
 
 
-  ngOnDestroy(): void {
-    this.searchSubscription.unsubscribe();
-  }
+
 
   // F affiche artisans selon nom cat ville
   searchArtisans(event: Event) {
@@ -124,7 +125,8 @@ export class ListeComponent {
       });
     }
   }
-}
+} 
+  
 export interface Artisan {
   id: string;
   name: string;
@@ -136,4 +138,4 @@ export interface Artisan {
   website: string;
   category: string;
   top: boolean;
-}
+} 

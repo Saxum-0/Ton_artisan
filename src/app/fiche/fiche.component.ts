@@ -11,7 +11,8 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-fiche',
   templateUrl: './fiche.component.html',
-  styleUrl: './fiche.component.scss'
+  styleUrl: './fiche.component.scss',
+
 })
 export class FicheComponent {
 

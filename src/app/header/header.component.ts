@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
 import { Artisan } from '../liste/liste.component';
@@ -11,13 +11,16 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  
   
 })
 export class HeaderComponent {
 logo: any = "Logo.png"
 sortedArtisans!: Artisan[];
-artisans!: Artisan[];
+artisans: Artisan[] = [];
+searchQuery: string = '';
+filteredArtisans: Artisan[] = [];
 
 constructor(
   private router: Router,
@@ -42,16 +45,11 @@ sanitizeHtml(unsafeHtml: any): SafeHtml {
 
 //Recherche navbar
 
-  searchArtisans(event: Event) {
-    const searchTerm = (event.target as HTMLInputElement).value.toLowerCase();
-    if (this.sanitizeHtml(searchTerm)) {
-      this.RechercheService.setSearchTerm(searchTerm);
-      this.router.navigate(['/artisan']);
-    }
-    else {
-      console.log("Code malveillant");
-    }
-  }
-
-}
-
+searchArtisans(event: Event){
+  const searchTerm = (event.target as HTMLInputElement).value.toLowerCase();
+  if (this.sanitizeHtml(searchTerm)) {
+    this.RechercheService.setSearchTerm(searchTerm);
+    this.router.navigate(['/liste']);
+  } else {console.log('ERR')}
+} }
+ 
