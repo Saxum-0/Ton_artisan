@@ -10,7 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-liste',
   templateUrl: './liste.component.html',
-  styleUrl: './liste.component.scss'
+  styleUrl: './liste.component.scss',
 })
 export class ListeComponent {
 
@@ -42,12 +42,12 @@ export class ListeComponent {
       this.sortedArtisans = [...this.artisans];
     });
   }
-  //function which disinfect and secure data.
+
   sanitizeHtml(unsafeHtml: any): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(unsafeHtml);
   }
 
-  // function allowing you to display the artisans sought according to their name, their city or their profession
+  // F affiche les artisans / nom, job, ville
   searchArt(): void {
     if (!this.artisans) {
       return;
@@ -56,24 +56,20 @@ export class ListeComponent {
       this.sortedArtisans = this.artisans.filter(
         (artisan) =>
           artisan.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-          artisan.specialty
-            .toLowerCase()
-            .includes(this.searchTerm.toLowerCase()) ||
-          artisan.location
-            .toLowerCase()
-            .includes(this.searchTerm.toLowerCase()),
+          artisan.specialty.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+          artisan.location.toLowerCase().includes(this.searchTerm.toLowerCase()),
       );
     } else {
-      console.log('Code malveillant');
+      console.log('error');
     }
   }
 
-  //Function to destroy an observable
+
   ngOnDestroy(): void {
     this.searchSubscription.unsubscribe();
   }
 
-  // function allowing you to display the artisans sought according to their name, their city or their profession
+  // F affiche artisans selon nom cat ville
   searchArtisans(event: Event) {
     const target = event.target as HTMLSelectElement;
     this.searchTerm = target.value.toLowerCase();
@@ -85,11 +81,12 @@ export class ListeComponent {
           artisan.location.toLowerCase().includes(this.searchTerm),
       );
     } else {
-      console.log('Code malveillant');
+      console.log('err');
     }
   }
 
-  //Function reacting to the select tag and which, depending on the user's action, calls the filterArtisansByCategory function
+  //F  calls the filterArtisansByCategory 
+
   sortArtisans(event: Event) {
     const target = event.target as HTMLSelectElement;
     this.selectedCategory = target.value;
@@ -104,7 +101,7 @@ export class ListeComponent {
     }
   }
 
-  //Function to sort artisans according to their category
+  //F tri artisan par cat
   filterArtisansByCategory(category: string): void {
     this.ApiService.getArtisans().subscribe((artisans) => {
       this.sortedArtisans = artisans.filter(
@@ -114,7 +111,7 @@ export class ListeComponent {
     });
   }
 
-  //Function allowing you to retrieve the category of the URL and display the artisans in this category using the filterArtisansByCategory function
+  //F uttilise categorie dans url pour afficher
   ngOnInit(): void {
     const category = this.route.snapshot.data['category'];
     if (category) {

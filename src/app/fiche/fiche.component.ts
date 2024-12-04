@@ -45,12 +45,13 @@ export class FicheComponent {
     });
   }
 
-  //function which disinfect and secure data.
+
+
   sanitizeHtml(unsafeHtml: any): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(unsafeHtml);
   }
 
-  //Function to display the craftsman having the same id as the one in the url
+  //F Affiche artisan selon ID URL
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -62,20 +63,8 @@ export class FicheComponent {
     }
   }
 
-  //Function to create an alert when the form is submitted in order to know if the action is carried out or not
-  public alertEmail(message: any, type: any) {
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')!;
-    const wrapper = document.createElement('div');
-    wrapper.innerHTML = [
-      `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-      `   <div>${message}</div>`,
-      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-      '</div>',
-    ].join('');
-    alertPlaceholder.append(wrapper);
-  }
 
-  //Function using EmailService by sending it the form data and which reacts based on the response
+  //F email service
   onSubmit(e: Event) {
     e.preventDefault();
     if (this.sanitizeHtml(this.contactForm)) {
@@ -89,19 +78,16 @@ export class FicheComponent {
       this.formService
         .sendEmail(templateParams)
         .then(() => {
-          console.log('Email sent successfully');
+          console.log('Email envoyé');
           this.contactForm.reset();
-          this.alertEmail('Votre message a été envoyé !', 'success');
+          
         })
         .catch((error) => {
-          console.error('Failed to send email', error);
-          this.alertEmail(
-            "ERREUR ! Votre message n'a pas été envoyé !",
-            'danger',
-          );
+          console.error('error', error);
+          
         });
     } else {
-      console.log('Code malveillant');
+      console.log('erreur');
     }
   }
 }
