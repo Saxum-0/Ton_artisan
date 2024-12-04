@@ -1,7 +1,14 @@
 .main{
     font-family: 'Graphik', arial, sans-serif;
 }
-
+img {
+    max-width: 90%;
+    height: 100px;
+    background-color: #fff;
+}
+.container-fluid a {
+    width: 30%;
+}
 .navbar{
     background-color: #384050 !important;
 }

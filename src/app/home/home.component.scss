@@ -1,0 +1,75 @@
+.steps {
+    background-color:  #384050;
+}
+.text-step p {
+    width: 100%;
+    background-color: #00497c;
+    color: #fff;
+    padding: 10px;
+    padding-right: 20px;
+    margin: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+h2 {
+    background-color: #cd2c2e;
+    color: #fff;
+    width: 50%;
+    padding: 10px;
+    padding-right: 20px;
+    margin: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.number {
+    background-color: #0074c7;
+    width: 40%;
+    padding: 10px;
+    padding-right: 20px;
+    margin: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+ }
+
+ .best-artisan {
+    background-color: #00497c;
+    width: 100%;
+    color: #fff;
+
+ }
+ .best-artisan p {
+    
+        background-color: #82b864;
+        color: #fff;
+        padding: 10px;
+        padding-right: 20px;
+        margin: 60px;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 20%;
+    
+ }
+ .second-artisans {
+    background-color: #0074c7;
+    width: 45%;
+    color: #fff;
+    margin: 2px;
+ }
+.second-artisans p {
+    background-color: #82b864;
+    color: #fff;
+    width: 40%;
+}
+ .row {
+    display:flex;
+    justify-content: space-between;
+    margin: 0;
+
+ }
+ .location {
+    margin: 0;
+    display: flex;
+    justify-content:flex-end ;
+}
+ 

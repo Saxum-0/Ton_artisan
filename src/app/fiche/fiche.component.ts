@@ -15,8 +15,8 @@ import { ApiService } from '../api.service';
 })
 export class FicheComponent {
 
-  favicon: any = '../assets/favicon.png';
-  halfStar: any = '../assets/half-star.png';
+  favicon: any = 'favicon.png';
+  
 
   @Input() name: string = '';
   @Input() job: string = '';

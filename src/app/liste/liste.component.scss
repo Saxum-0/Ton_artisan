@@ -31,7 +31,7 @@
   }
   
   .form-control::placeholder {
-    color: #0074c7;
+    color: #cd2c2e;
   }
   
   .button {
@@ -58,7 +58,7 @@
     justify-content: space-between;
   }
   
-  .opinion {
+  .note {
     background-color: #0074c7;
     color: #fff;
     display: flex;
@@ -73,7 +73,7 @@
     margin-left: 0px;
   }
   
-  .opinion p {
+  .note p {
     margin: 10px;
     margin-right: 15px;
   }
@@ -105,4 +105,7 @@
   
   .opinion-btn {
     display: flex;
+  }
+  .btn-primary {
+    background-color: #82b864;
   }

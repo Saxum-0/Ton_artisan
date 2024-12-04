@@ -45,20 +45,20 @@ hr {
     padding-left: 50px;
 }
 
-.opinion {
+.note {
   background-color: #0074c7;
   color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 200px;
+  width: 400px;
   border-radius: 30px;
   padding: 0 10px;
   margin: 20px;
   margin-left : 0;
 }
 
-.opinion p {
+.note p {
   margin: 10px;
   margin-right: 30px;
 }
@@ -85,7 +85,7 @@ hr {
 }
 
 .container-contact{
-    background-color: #F1F8FC;
+    background-color: #384050;
     padding : 10px;
     border : solid 1px #0074c7;
     border-bottom: none;
@@ -114,5 +114,5 @@ textarea{
 }
 
 .btn{
-    background-color: #0074c7;
+    background-color: #82b864;
 }

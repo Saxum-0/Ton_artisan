@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-logo: any = '/src/assets/Logo.png'
+logo: any = 'Logo.png'
 
 }
